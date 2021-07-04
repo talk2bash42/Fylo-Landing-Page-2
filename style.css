@@ -1,0 +1,477 @@
+/* --Header-- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    /* background: #1F305E;
+     */
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-color: hsl(217, 28%, 15%);
+    /* background-image: linear-gradient(rgba(4,9,30,0.7),
+    rgba(4,9,30,0.7))url(images/bg-curvy-desktop.svg
+    ); */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    /* this moves all li to the right */
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    /* this will reomve bullets */
+    list-style: none; 
+    /* all li will be horizontal  */
+    display: inline-block;
+    /* creates space between list */
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li  {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: lightblue;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+/* fits the image properly, so it doesnt overlap its boundaries */
+.text-box img {
+    max-width: 40%;
+    height: auto;
+}
+
+.text-box h1 {
+    font-size: 20px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.button_1 {
+    display: inline-block;
+    width: 20%;
+    height: 12.5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    background-color: #00d4ff;
+    border-radius: 50px;
+}
+
+.button_1:hover {
+    border:1px solid thistle ;
+    background: thistle;
+    transition: 1s;
+}
+
+
+/* media query ensures that the website is responsive regardless of the viewing device */
+
+@media (max-width:600px) {
+    .text-box h1 {
+        font-size: 15px;
+    }
+
+    .text-box p {
+        /* font-size: 9px; */
+        font-size: 3vw;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links ul li {
+    /* all li will be horizontal  */
+    display: inline-block;
+    /* creates space between list */
+    padding: 8px 12px;
+    position: relative;
+    }
+
+    .button_1 {
+        font-size: 3vw;
+    }
+}
+
+
+/* --mid_section-- */
+
+.far_mid-section {
+    /* background: #1F305E; */
+}
+.trial {
+    
+}
+
+.mid-section {
+    background-color: hsl(218, 28%, 13%);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+   
+}
+
+.mid-section figcaption {
+    color: #fff;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* .row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+} */
+
+@media (max-width: 700px) {
+    .row{
+        flex-direction: column;
+
+    }
+
+    .far_mid-section img {
+        height: 150px;
+    }
+
+    .course-col-2 img {
+        height: 10px;
+    }
+    
+}
+
+/* far_mid_section */
+
+.row-2 {
+    /* background: hsl(217, 28%, 15%); */
+    padding: 10px;
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+}
+
+.course-col-2 {
+    margin-top: 10%;
+}
+
+.course-col-2 h1 {
+    font-size: 30px;
+}
+
+.course-col-2 p {
+    font-size: 15px;
+}
+
+.course-col-2 a {
+    font-size: 10px;
+    color: aquamarine;
+}
+
+
+.course-co img {
+    width: 90%;
+}
+
+.far_mid-section {
+    background: hsl(217, 28%, 15%);
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    /* width: 70%; */
+    /* margin-top: 10px; */
+    /* text-align: center; */
+    padding-top: 50px;
+}
+
+.row-2 h1 {
+    color: #fff;
+}
+
+.course-col-2 h1 {
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+
+    .far_mid-section img {
+        height: 150px;
+    }
+
+    .course-col-2 img {
+        height: 10px;
+    }
+    
+}
+
+.course-col p {
+    font-size: 10px;
+}
+
+/* -----testimonials----- */
+.testimonials {
+    /* margin: 5%; */
+    padding: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 30px; */
+    grid-gap: 2em; 
+    height: 100%;
+    /* background: hsl(218, 28%, 13%); */
+    /* width: 100%; */
+}
+
+.tests {
+    background: hsl(218, 28%, 13%);
+}
+
+.testimonials > div {
+    background: hsl(219, 30%, 18%);
+    padding: 2px;
+    /* width: 100%; */
+    /* height: 50%; */
+}
+
+.testimonial-col img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.testimonials p {
+    color: #fff;
+}
+
+.testimonials h3 {
+    color: #fff;
+}
+
+/* #test {
+    height: 50px;
+} */
+/* .testimonials > div:nth-child(odd) {
+    background: #ddd;
+} */
+
+/* -----bottom----- */
+.bottom-1 {
+    background: hsl(218, 28%, 13%);
+    text-align: center;
+    height: 100%;
+    /* margin: 15%; */
+    /* padding: 10px; */
+   
+}
+
+.input input{
+    width: 45%;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.bottom-1 div {
+    
+    padding: 5px;
+    /* width: 100%; */
+}
+
+.bottom-1 h4 {
+    margin-top: 15px;
+    color: #fff;
+}
+
+.bottom-1 p {
+    margin-top: 15px;
+    color: #fff;
+}
+
+.bottom-1 input {
+    margin-top: 20px;
+}
+
+.button_2 {
+    display: inline-block;
+    width: 20%;
+    height: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    background-color: #00d4ff;
+    border-radius: 50px;
+}
+
+.button_2:hover {
+    border:1px solid thistle ;
+    background: thistle;
+    transition: 1s;
+}
+
+
+/* ------footer--------- */
+
+.footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    /* padding: 5%; */
+}
+
+.footer div {
+    
+    background: hsl(216, 53%, 9%);
+}
+
+.footer p {
+    color: #fff;
+    font-size: 13px;
+}
+
+.footer li {
+    color: #fff;
+    font-size: 13px;
+}
+
+.footer div ul {
+    margin: 20px;
+    padding: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none; 
+}
+
+.footer div ul li {
+    margin: 5px;
+    
+}
+
+.media_icon img {
+    margin: 5px;
+}
+
+.footer-col-1 img{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.footer-col-1 p {
+    margin-left: 20px;
+}
+
+.footer-col-2 {
+    display: grid;
+    grid-template-columns: 2fr 14fr;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.contact {
+    /* margin: 2px; */
+}
+
+.contact-col-1 {
+    display: inline-block;
+}
+
+@media (max-width: 700px) {
+    .footer{
+        display: block;
+    }
+    .contact div {
+        display: block;
+    }
+
+    .footer ul {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials {
+        display: block;
+    }
+
+    .testimonials div {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .bottom-1 {
+        /* display: inline-block; */
+        width: 80%;
+    }
+
+    .input {
+        display: block;
+        max-width: 600px;
+    }
+        
+}
+
